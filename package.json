@@ -5,13 +5,13 @@
   "main": "main.js",
   "author": "Nnaemeka Anaele",
   "license": "MIT",
-  "homepage": "https://github.com/YOUR_GITHUB_USERNAME/V-Pinger(VPN)#readme",
+  "homepage": "https://github.com/Aneal250/v-pinger#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/YOUR_GITHUB_USERNAME/V-Pinger(VPN).git"
+    "url": "git+https://github.com/Aneal250/v-pinger.git"
   },
   "bugs": {
-    "url": "https://github.com/YOUR_GITHUB_USERNAME/V-Pinger(VPN)/issues"
+    "url": "https://github.com/Aneal250/v-pinger/issues"
   },
   "keywords": [
     "vpn",
@@ -25,9 +25,9 @@
   ],
   "scripts": {
     "start": "electron .",
-    "dist": "electron-builder",
-    "dist:mac": "electron-builder --mac",
-    "dist:win": "electron-builder --win"
+    "dist": "electron-builder --publish never",
+    "dist:mac": "electron-builder --mac --publish never",
+    "dist:win": "electron-builder --win --publish never"
   },
   "devDependencies": {
     "electron": "^31.0.0",
