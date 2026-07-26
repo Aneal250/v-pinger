@@ -5,7 +5,7 @@ welcome — bug reports, feature ideas, documentation, and code.
 
 ## Ways to contribute
 
-- **Report a bug** — open an [issue](https://github.com/YOUR_GITHUB_USERNAME/V-Pinger(VPN)/issues)
+- **Report a bug** — open an [issue](<https://github.com/aneal250/V-Pinger(VPN)/issues>)
   using the Bug report template.
 - **Request a feature** — open an issue using the Feature request template.
 - **Submit code** — fork the repo, make your change on a branch, and open a
@@ -16,7 +16,7 @@ welcome — bug reports, feature ideas, documentation, and code.
 Requires [Node.js](https://nodejs.org/) 18 or newer.
 
 ```bash
-git clone https://github.com/YOUR_GITHUB_USERNAME/V-Pinger(VPN).git
+git clone https://github.com/aneal250/V-Pinger(VPN).git
 cd V-Pinger(VPN)
 npm install
 npm start        # launches the app in development
@@ -24,13 +24,13 @@ npm start        # launches the app in development
 
 ### Project layout
 
-| Path | Purpose |
-|------|---------|
-| `main.js` | Electron main process — the ping engine and IPC handlers |
-| `preload.js` | Secure bridge exposing a small API to the UI |
-| `renderer/` | The window UI (`index.html`, `renderer.js`, `styles.css`) |
-| `build/` | App icons (`icon.icns`, `icon.ico`, `icon.png`) |
-| `.github/workflows/build.yml` | CI that builds the `.dmg` and `.exe` |
+| Path                          | Purpose                                                   |
+| ----------------------------- | --------------------------------------------------------- |
+| `main.js`                     | Electron main process — the ping engine and IPC handlers  |
+| `preload.js`                  | Secure bridge exposing a small API to the UI              |
+| `renderer/`                   | The window UI (`index.html`, `renderer.js`, `styles.css`) |
+| `build/`                      | App icons (`icon.icns`, `icon.ico`, `icon.png`)           |
+| `.github/workflows/build.yml` | CI that builds the `.dmg` and `.exe`                      |
 
 ## Building installers
 

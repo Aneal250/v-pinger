@@ -13,7 +13,7 @@ The latest released version receives security updates.
 Please **do not** open a public issue for security vulnerabilities.
 
 Instead, report them privately using GitHub's
-[Report a vulnerability](https://github.com/YOUR_GITHUB_USERNAME/V-Pinger(VPN)/security/advisories/new)
+[Report a vulnerability](<https://github.com/aneal250/V-Pinger(VPN)/security/advisories/new>)
 feature, or email **YOUR_CONTACT_EMAIL**.
 
 Include as much detail as you can:

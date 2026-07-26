@@ -7,7 +7,7 @@
 **A tiny cross-platform desktop app that pings IPs on a set interval to keep a VPN connection alive.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Build desktop apps](https://github.com/YOUR_GITHUB_USERNAME/V-Pinger(VPN)/actions/workflows/build.yml/badge.svg)](https://github.com/YOUR_GITHUB_USERNAME/V-Pinger(VPN)/actions/workflows/build.yml)
+[![Build desktop apps](<https://github.com/aneal250/V-Pinger(VPN)/actions/workflows/build.yml/badge.svg>)](<https://github.com/aneal250/V-Pinger(VPN)/actions/workflows/build.yml>)
 [![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Windows-blue)](#download)
 [![Built with Electron](https://img.shields.io/badge/built%20with-Electron-47848F?logo=electron&logoColor=white)](https://www.electronjs.org/)
 
@@ -47,13 +47,14 @@ This is the GUI version of the original [`ping-check.sh`](ping-check.sh) script.
 <!-- Add a screenshot of the app window here, e.g.:
 <div align="center"><img src="docs/screenshot.png" alt="V-Pinger(VPN) window" width="520" /></div>
 -->
+
 _Coming soon — run `npm start` and grab a screenshot to add here._
 
 ## Download
 
-Grab the latest installer from the [**Releases**](https://github.com/YOUR_GITHUB_USERNAME/V-Pinger(VPN)/releases)
+Grab the latest installer from the [**Releases**](<https://github.com/aneal250/V-Pinger(VPN)/releases>)
 page, or download the build artifacts from the most recent
-[**Actions**](https://github.com/YOUR_GITHUB_USERNAME/V-Pinger(VPN)/actions) run:
+[**Actions**](<https://github.com/aneal250/V-Pinger(VPN)/actions>) run:
 
 - **macOS:** `V-Pinger(VPN)-<version>.dmg` (works on Intel and Apple Silicon)
 - **Windows:** `V-Pinger(VPN) Setup <version>.exe`
@@ -63,7 +64,7 @@ page, or download the build artifacts from the most recent
 Requires [Node.js](https://nodejs.org/) 18+.
 
 ```bash
-git clone https://github.com/YOUR_GITHUB_USERNAME/V-Pinger(VPN).git
+git clone https://github.com/aneal250/V-Pinger(VPN).git
 cd V-Pinger(VPN)
 npm install
 npm start
