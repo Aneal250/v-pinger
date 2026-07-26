@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; style-src 'self' 'unsafe-inline';" />
+  <title>V-Pinger(VPN)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <h1>V-Pinger(VPN)</h1>
+    <p class="subtitle">Ping IPs at a set interval to keep your VPN connection alive.</p>
+  </header>
+                                    
+                                                    
+  <main>
+    <section class="config">
+      <label class="field">
+        <span>IP address / host</span>
+        <div class="add-row">
+          <input type="text" id="ipInput" placeholder="e.g. 10.8.12.28" autocomplete="off" />
+          <button id="addBtn" type="button">Add</button>
+        </div>
+      </label>
+
+      <ul id="ipList" class="ip-list" aria-label="IP addresses to ping"></ul>
+
+      <div class="field-row">
+        <label class="field small">
+          <span>Interval (seconds)</span>
+          <input type="number" id="intervalInput" min="1" value="120" />
+        </label>
+        <label class="field small">
+          <span>Pings per host</span>
+          <input type="number" id="countInput" min="1" value="4" />
+        </label>
+      </div>
+
+      <div class="actions">
+        <button id="startBtn" type="button" class="primary">Start</button>
+        <button id="stopBtn" type="button" class="danger" disabled>Stop</button>
+        <span id="status" class="status idle">Idle</span>
+      </div>
+    </section>
+
+    <section class="log-section">
+      <div class="log-header">
+        <span>Live log</span>
+        <button id="clearBtn" type="button" class="ghost">Clear</button>
+      </div>
+      <pre id="log" class="log" aria-live="polite"></pre>
+    </section>
+  </main>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
+
+
+                                                                                      
+  

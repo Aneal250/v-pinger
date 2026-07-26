@@ -1,0 +1,50 @@
+name: Build desktop apps
+
+# Build the .dmg (macOS: Intel + Apple Silicon) and .exe (Windows)
+# on every push to main and on manual dispatch. Artifacts are uploaded
+# to each run so you can download them without a release.
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  workflow_dispatch:
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: macos-latest
+            platform: mac
+          - os: windows-latest
+            platform: win
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build (${{ matrix.platform }})
+        run: npm run dist:${{ matrix.platform }}
+        env:
+          # Do not attempt code signing in CI (no certs configured).
+          CSC_IDENTITY_AUTO_DISCOVERY: false
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload installers
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.platform }}-installers
+          path: |
+            dist/*.dmg
+            dist/*.exe
+          if-no-files-found: warn
+          retention-days: 30

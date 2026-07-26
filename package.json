@@ -1,0 +1,74 @@
+{
+  "name": "V-Pinger(VPN)",
+  "version": "1.0.0",
+  "description": "A tiny cross-platform desktop app that pings IPs on a set interval to keep a VPN connection alive.",
+  "main": "main.js",
+  "author": "Nnaemeka Anaele",
+  "license": "MIT",
+  "homepage": "https://github.com/YOUR_GITHUB_USERNAME/V-Pinger(VPN)#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR_GITHUB_USERNAME/V-Pinger(VPN).git"
+  },
+  "bugs": {
+    "url": "https://github.com/YOUR_GITHUB_USERNAME/V-Pinger(VPN)/issues"
+  },
+  "keywords": [
+    "vpn",
+    "ping",
+    "keep-alive",
+    "keepalive",
+    "electron",
+    "desktop",
+    "network",
+    "connectivity"
+  ],
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder",
+    "dist:mac": "electron-builder --mac",
+    "dist:win": "electron-builder --win"
+  },
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.vpnkeepalive.pinger",
+    "productName": "V-Pinger(VPN)",
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer/**/*"
+    ],
+    "directories": {
+      "buildResources": "build",
+      "output": "dist"
+    },
+    "mac": {
+      "category": "public.app-category.utilities",
+      "icon": "build/icon.icns",
+      "target": [
+        {
+          "target": "dmg",
+          "arch": ["x64", "arm64"]
+        }
+      ]
+    },
+    "win": {
+      "icon": "build/icon.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true
+    }
+  }
+}
